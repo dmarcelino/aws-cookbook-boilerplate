@@ -1,13 +1,18 @@
 # aws-cookbook-boilerplate
-Cookbook repository boilerplate for AWS OpsWorks
+Cookbook repository boilerplate for Amazon AWS OpsWorks
 
-A working custom cookbook repository to be used with AWS OpsWorks, based on 
+A working custom cookbook repository to be used with Amazon AWS OpsWorks, based on 
 [Deploying MongoDB with OpsWorks](http://blogs.aws.amazon.com/application-management/post/Tx1RB65XDMNVLUA/Deploying-MongoDB-with-OpsWorks). This repo adds a custom recipe to install MongoDB from https://supermarket.chef.io/cookbooks/mongodb.
 
 ## Recipes
 
 ### mongodb-aws
 In order to access MongoDB on your running instance you'll need to open up port 27017 (assuming you are using the default) by [setting a security group](http://docs.aws.amazon.com/gettingstarted/latest/wah/getting-started-application-server.html) through [Amazon EC2 console](https://console.aws.amazon.com/ec2/).
+
+#### Known issues
+##### No such file or directory - systemctl
+
+As reported in [edelight/chef-mongodb#358](https://github.com/edelight/chef-mongodb/issues/358), the first time you run your mongodb instance you may experience this error. Stopping and starting `mongod` service should fix the issue and next time you start the instance everything should be fine.
 
 ## Updating Custom Cookbooks
 AWS caches the custom cookbook repository locally. If you modify the custom cookbooks in the repository, you must ensure that the updated cookbooks are installed on your instances' local caches. You can do that by going to **Stack -> Run Command -> Update Custom Cookbooks**. More about this on [AWS: Updating Custom Cookbooks](http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-installingcustom-enable-update.html).
