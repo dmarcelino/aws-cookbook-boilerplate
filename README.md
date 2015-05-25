@@ -27,5 +27,6 @@ AWS caches the custom cookbook repository locally. If you modify the custom cook
 * [AWS: Installing Custom Cookbooks](http://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook-installingcustom-enable.html)
 * [Deploying MongoDB with OpsWorks](http://blogs.aws.amazon.com/application-management/post/Tx1RB65XDMNVLUA/Deploying-MongoDB-with-OpsWorks)
 * [Overwrite templates in wrapper-cookbooks](https://raymii.org/s/articles/Chef_-_overwrite_templates_in_wrapper_cookbooks.html)
+  * [chef-rewind](https://github.com/thommay/chef-rewind) is probably the most efficient way
 * [CHEF Supermarket](https://supermarket.chef.io)
 * [berkshelf.com](http://berkshelf.com)
